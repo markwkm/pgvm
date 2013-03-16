@@ -16,4 +16,5 @@ apt-get install -y \
 		jade \
 		docbook \
 		docbook-utils \
-		xsltproc
+		xsltproc \
+		automake
