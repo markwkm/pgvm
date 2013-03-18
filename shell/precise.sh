@@ -17,4 +17,7 @@ apt-get install -y \
 		docbook \
 		docbook-utils \
 		xsltproc \
-		automake
+		automake \
+		python-setuptools || exit 1
+
+easy_install pgxnclient || exit 1
