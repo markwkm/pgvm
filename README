@@ -1,0 +1,7 @@
+Define these environment variables as the path to source directories and they
+will be mounted the next time the vm is started:
+
+- PGVM_POSTGRESQL_SRC = postgresql source
+- PGVM_PG_TOP_SRC = pg_top source
+- PGVM_PG_PROCTAB_SRC = pg_proctab source
+

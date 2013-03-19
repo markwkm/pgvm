@@ -11,5 +11,23 @@ Vagrant::Config.run do |config|
     precise_config.vm.box = "pgprecise"
     precise_config.vm.box_url = "http://files.vagrantup.com/precise64.box"
     precise_config.vm.provision :shell, :path => "shell/precise.sh"
+
+    pgvm_postgresql_src = ENV['PGVM_POSTGRESQL_SRC']
+    if pgvm_postgresql_src
+      precise_config.vm.share_folder "postgresql", "/usr/local/src/postgresql",
+          pgvm_postgresql_src
+    end
+
+    pgvm_pg_top_src = ENV['PGVM_PG_TOP_SRC']
+    if pgvm_pg_top_src
+      precise_config.vm.share_folder "pg_top", "/usr/local/src/pg_top",
+          pgvm_pg_top_src
+    end
+
+    pgvm_pg_proctab_src = ENV['PGVM_PG_PROCTAB_SRC']
+    if pgvm_pg_proctab_src
+      precise_config.vm.share_folder "pg_proctab", "/usr/local/src/pg_proctab",
+          pgvm_pg_proctab_src
+    end
   end
 end
