@@ -3,8 +3,8 @@
 
 Vagrant::Config.run do |config|
   config.vm.define :openbsd do |openbsd_config|
-    openbsd_config.vm.box = "pgopenbsd"
-    openbsd_config.vm.box_url = "https://github.com/downloads/stefancocora/openbsd_amd64-vagrant/openbsd50_amd64.box"
+    openbsd_config.vm.box = "openbsd52-64"
+    openbsd_config.vm.box_url = "https://raw.github.com/pdxpug/pgbox/master/openbsd-52-64.box"
   end
 
   config.vm.define :precise do |precise_config|
